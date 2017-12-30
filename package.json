@@ -1,0 +1,86 @@
+{
+  "name": "go-build",
+  "main": "./lib/go-build",
+  "version": "0.0.0",
+  "description": "UI for running Go builds",
+  "keywords": ["go", "go-plus", "go-debug", "golang", "build", "go-build"],
+  
+  "activationHooks": [
+    "language-go:grammar-used"
+  ],
+  "repository": "https://github.com/mervynrussell/go-build",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "ansi-to-html": "^0.6.3",
+    "atom-package-deps": "^4.6.0",
+    "chokidar": "^1.7.0",
+    "etch": "^0.12.7",
+    "json-rpc2": "^1.0.2",
+    "redux": "^3.7.2",
+    "semver": "^5.4.1",
+    "untildify": "^3.0.2"
+  },
+  "package-deps": [
+    "go-plus"
+  ],
+  "consumedServices": {
+    "go-config": {
+      "versions": {
+        "^1.0.0": "consumeGoConfig"
+      }
+    },
+    "go-get": {
+      "versions": {
+        "^2.0.0": "consumeGoGet"
+      }
+    }
+  },
+  "providedServices": {
+    "go-plus.view": {
+      "versions": {
+        "0.1.0": "provideGoPlusView"
+      }
+    }
+  },
+  "deserializers": {
+    "go-build/GoBuildView": "deserializeGoBuildView"
+  },
+  "configSchema": {
+    "limitCommandsToGo": {
+      "title": "Commands available only in go source",
+      "description": "Determines whether the commands of this package are only available in go source files or in all files.",
+      "type": "boolean",
+      "default": true,
+      "order": 1
+    },
+    "panelInitialVisible": {
+      "title": "Panel Initially Visible",
+      "description": "Determines whether the build panel is initially visible or not.",
+      "type": "boolean",
+      "default": false,
+      "order": 2
+    },
+    "clearOutputOnStart": {
+      "title": "Clear build output panel on start",
+      "type": "boolean",
+      "default": false,
+      "order": 3
+    },
+    "saveAllFiles": {
+      "title": "Save all files before starting build",
+      "type": "boolean",
+      "default": false,
+      "order": 4
+    }
+  },
+  "standard": {
+    "globals": [
+      "advanceClock",
+      "atom",
+      "waitsForPromise"
+    ]
+  }
+}
