@@ -4,10 +4,7 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.go-build {
-}
-
-.go-build-btn-flat.btn, {
+.go-build-btn-flat.btn {
   border: none;
   border-radius: 0;
   background: none;
@@ -18,8 +15,74 @@
   padding: 0;
 }
 
-.go-build-panel-content {
+.go-build-panel {
+  flex: 1;
+  display: flex;
+}
+
+.go-build-block {
+  &:extend(.block);
+  margin-bottom: 0px;
+}
+
+.go-build-panel-button-bar {
+  flex-shrink: 0;
+  border-right: 1px solid @base-border-color;
+  > * {
+    min-width: 3em;
+    min-height: 3em;
+  }
+}
+
+.go-panel-content {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+}
+
+.go-build-panel-settings {
   height: 100%;
   overflow: auto;
   flex: 1;
+}
+
+@go-plus-panel-body-padding: 10px;
+.go-build-output {
+  flex: 1;
+  display: flex;
+  margin: -@go-plus-panel-body-padding; /* revert padding of panel-body in go-plus */
+}
+
+.go-build-output-sidebar {
+  flex-shrink: 0;
+  border-right: 1px solid @base-border-color;
+  > * {
+    min-width: 3em;
+    min-height: 3em;
+  }
+}
+
+.go-build-output-content {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+
+  .output {
+    flex: 1;
+    white-space: pre-wrap;
+    padding: @go-plus-panel-body-padding; /* same as in go-plus */
+    overflow: auto;
+    word-break: break-all;
+  }
+}
+
+.go-plus-panel.is-vertical {
+  .go-build-output {
+    flex-direction: column;
+  }
+
+  .go-build-output-sidebar {
+    border-right: 0;
+    border-bottom: 1px solid @base-border-color;
+  }
 }

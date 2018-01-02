@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "description": "UI for running Go builds",
   "keywords": ["go", "go-plus", "go-debug", "golang", "build", "go-build"],
-  
   "activationHooks": [
     "language-go:grammar-used"
   ],
@@ -21,6 +20,7 @@
     "json-rpc2": "^1.0.2",
     "redux": "^3.7.2",
     "semver": "^5.4.1",
+    "temp": "^0.8.3",
     "untildify": "^3.0.2"
   },
   "package-deps": [
