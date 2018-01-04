@@ -1,9 +1,16 @@
 {
   "name": "go-build",
   "main": "./lib/go-build",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "UI for running Go builds",
-  "keywords": ["go", "go-plus", "go-debug", "golang", "build", "go-build"],
+  "keywords": [
+    "go",
+    "go-plus",
+    "go-debug",
+    "golang",
+    "build",
+    "go-build"
+  ],
   "activationHooks": [
     "language-go:grammar-used"
   ],
