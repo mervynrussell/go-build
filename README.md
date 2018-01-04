@@ -1,5 +1,4 @@
-# [go-build] (TBD)
-# [source] (https://github.com/mervynrussell/go-build)
+# [go-build] (https://atom.io/packages/go-build)
 
 A go build package for atom.  Provides a UI for setting all the main and advanced go build flags.
 
