@@ -19,3 +19,7 @@ Note this package is intended to be used in conjunction with go-plus.  It uses s
 
 ## Key bindings
 * `Ctrl+Alt+O` toggle the build panel
+
+## Acknowledgements
+Big thanks to the folks who created the go-plus and go-debug packages.  This is my first attempt at an Atom package and it wouldn't have been possible without
+perusing and using parts of their code.
