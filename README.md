@@ -1,6 +1,7 @@
 # [go-build] (https://atom.io/packages/go-build)
 
-A go build package for atom.  Provides a UI for setting all the main and advanced go build flags.
+A go build package for atom.  Provides a UI for setting all the main and advanced go build flags.  
+Allows setting the Go env variables which will be used for building the target, thus allowing cross-compilation and the ability to switch C compilers etc.
 
 ![Demo](https://raw.githubusercontent.com/mervynrussell/go-build/master/resources/demo.gif)
 
